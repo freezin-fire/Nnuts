@@ -27,9 +27,15 @@
     <ClInclude Include="src\Nnuts\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nnuts\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nnuts\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nnuts\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
