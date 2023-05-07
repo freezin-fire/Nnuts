@@ -16,7 +16,10 @@ project "Nnuts"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-	
+
+	pchheader "Nnpch.h"
+	pchsource "Nnuts/src/Nnpch.cpp"
+
 	files{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"

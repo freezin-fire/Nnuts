@@ -2,9 +2,6 @@
 
 #include "Nnuts/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Nnuts {
 
 	// Currently, these events are blocked. So like if an

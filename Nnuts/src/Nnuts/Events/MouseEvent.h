@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Nnuts {
 	class NNUTS_API MouseMovedEvent : public Event {
 	public:

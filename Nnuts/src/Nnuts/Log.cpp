@@ -1,3 +1,4 @@
+#include "Nnpch.h"
 #include "Log.h"
 
 namespace Nnuts {

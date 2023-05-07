@@ -1,3 +1,4 @@
+#include "Nnpch.h"
 #include "Application.h"
 
 #include "Nnuts/Events/ApplicationEvent.h"
@@ -15,7 +16,9 @@ namespace Nnuts {
 
 	void Application::Run() {
 		WindowResizeEvent e(1280, 720);
-		NN_TRACE(e);
+		if (e.IsInCategory(EventCategoryApplication)) {
+			NN_TRACE(e);
+		}
 		
 		while (true);
 	}

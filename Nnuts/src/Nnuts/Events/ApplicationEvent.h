@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Nnuts {
 
 	class NNUTS_API WindowResizeEvent : public Event {
