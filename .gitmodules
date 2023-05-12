@@ -3,4 +3,4 @@
 	url = https://github.com/gabime/spdlog
 [submodule "Nnuts/vendor/GLFW"]
 	path = Nnuts/vendor/GLFW
-	url = https://github.com/TheCherno/GLFW
+	url = https://github.com/TheCherno/glfw
