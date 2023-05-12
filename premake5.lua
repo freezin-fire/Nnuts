@@ -9,6 +9,12 @@ workspace "Nnuts"
 	
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+--Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Nnuts/vendor/GLFW/include"
+
+include "Nnuts/vendor/GLFW"
+
 project "Nnuts"
 	location "Nnuts"
 	kind "SharedLib"
@@ -27,7 +33,14 @@ project "Nnuts"
 	
 	includedirs{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+	
+	links{
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	filter "system:windows"
@@ -45,14 +58,17 @@ project "Nnuts"
 		}
 
 	filter "configurations:Debug"
+		buildoptions "/MDd"
 		defines "NN_DEBUG"
 		symbols "On"
 	
 	filter "configurations:Release"
+		buildoptions "/MDd"
 		defines "NN_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
+		buildoptions "/MD"
 		defines "NN_DIST"
 		optimize "On"
 

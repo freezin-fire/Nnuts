@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Nnuts/Log.h"
+
 #ifdef NN_PLATFORM_WINDOWS
 #include <Windows.h>
 #endif // NN_PLATFORM_WINDOWS

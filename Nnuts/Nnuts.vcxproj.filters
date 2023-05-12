@@ -7,6 +7,9 @@
     <Filter Include="Nnuts\Events">
       <UniqueIdentifier>{81EFDE1E-6D52-6EC3-16D8-A679021A3A46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nnpch.h" />
@@ -35,6 +38,12 @@
     <ClInclude Include="src\Nnuts\Log.h">
       <Filter>Nnuts</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nnuts\Window.h">
+      <Filter>Nnuts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\WindowsWindow.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nnpch.cpp" />
@@ -43,6 +52,9 @@
     </ClCompile>
     <ClCompile Include="src\Nnuts\Log.cpp">
       <Filter>Nnuts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\WindowsWindow.cpp">
+      <Filter>Platform</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

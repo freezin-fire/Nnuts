@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Nnuts/Core.h"
+#include <functional>
 
 namespace Nnuts {
 
