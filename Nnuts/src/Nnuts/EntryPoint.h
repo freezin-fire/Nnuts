@@ -1,5 +1,7 @@
 #pragma once
 
+// Entry point - the main class is defined here
+
 #ifdef NN_PLATFORM_WINDOWS
 
 extern Nnuts::Application* Nnuts::CreateApplication();

@@ -1,7 +1,8 @@
 #pragma once
 
 #include "Nnuts/Core.h"
-#include <functional>
+#include <Nnpch.h>
+//#include <functional>
 
 namespace Nnuts {
 
@@ -46,6 +47,8 @@ namespace Nnuts {
 	// Event class defination
 	class NNUTS_API Event {
 	public:
+		bool m_Handled = false;
+
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
@@ -54,9 +57,6 @@ namespace Nnuts {
 		inline bool IsInCategory(EventCategory category) {
 			return GetCategoryFlags() & category;
 		}
-
-	protected:
-		bool m_Handled = false;
 	};
 
 	// Event Dispatcher defination, here T is any event like WindowResize
@@ -70,7 +70,7 @@ namespace Nnuts {
 
 		template<typename T>
 		bool Dispatch(EventFn<T> func) {
-			if (m_Event.GetEventType == T::GetStaticType()) {
+			if (m_Event.GetEventType() == T::GetStaticType()) {
 				m_Event.m_Handled = func(*(T*)&m_Event);
 				return true;
 			}
@@ -80,7 +80,7 @@ namespace Nnuts {
 		Event& m_Event;
 	};
 	
-	inline std::ostream& operator<<(std::ostream& os, const Event& e) {
+	inline std::ostream& operator <<(std::ostream& os, const Event& e) {
 		return os << e.ToString();
 	}
 }
