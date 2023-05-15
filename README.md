@@ -6,8 +6,8 @@ In this document, you'll find all the information you need to get started with t
 Nnuts is primarily an early-stage interactive application and rendering engine for Windows. Currently not much is implemented, however (almost) everything inside this repository is being created within YouTube videos, found at thecherno.com/engine.
 
 Also I would recommend subscribing to The Cherno on youtube and follow him on github. He is a great teacher and an awesome youtuber with other study resources also by him.
-<br>[![Youtube]](https://www.youtube.com/user/TheChernoProject)
-<br>[![GitHub]](https://github.com/TheCherno)
+<br>[[TheCherno Youtube Channel]](https://www.youtube.com/user/TheChernoProject)
+<br>[[TheCherno GitHub Profile]](https://github.com/TheCherno)
 
 
 ## Getting Started
