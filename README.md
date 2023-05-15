@@ -38,4 +38,8 @@ Since I am the only one working on the project it will take quite some time to c
 - Audio system
 
 ## Goal:
-I am aiming to complete at least the 2D rendering part of the Engine before the end of 2023, but I am definitely aiming to finish it as early as possible because the development process is also quite fun
+I am aiming to complete at least the 2D rendering part of the Engine before the end of 2023, but I am definitely aiming to finish it as early as possible because the development process is also quite fun.
+
+## Contact us:
+If you have any questions regarding the project or in general too, feel free to contact me:
+grvt.shrm2003@gmail.com
