@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "Nnuts/Application.h"
+#include "Nnuts/Layer.h"
 #include "Nnuts/Log.h"
 
 //---------Entry Point-----------

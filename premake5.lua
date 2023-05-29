@@ -58,18 +58,18 @@ project "Nnuts"
 		}
 
 	filter "configurations:Debug"
-		buildoptions "/MDd"
 		defines "NN_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 	
 	filter "configurations:Release"
-		buildoptions "/MDd"
 		defines "NN_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
-		buildoptions "/MD"
 		defines "NN_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -104,13 +104,16 @@ project "Sandbox"
 		}
 
 	filter "configurations:Debug"
+		buildoptions "/MDd"
 		defines "NN_DEBUG"
 		symbols "On"
 	
 	filter "configurations:Release"
+		buildoptions "/MD"
 		defines "NN_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
+		buildoptions "/MD"
 		defines "NN_DIST"
 		optimize "On"

@@ -35,6 +35,12 @@
     <ClInclude Include="src\Nnuts\Events\MouseEvent.h">
       <Filter>Nnuts\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nnuts\Layer.h">
+      <Filter>Nnuts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nnuts\LayerStack.h">
+      <Filter>Nnuts</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nnuts\Log.h">
       <Filter>Nnuts</Filter>
     </ClInclude>
@@ -48,6 +54,12 @@
   <ItemGroup>
     <ClCompile Include="src\Nnpch.cpp" />
     <ClCompile Include="src\Nnuts\Application.cpp">
+      <Filter>Nnuts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nnuts\Layer.cpp">
+      <Filter>Nnuts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nnuts\LayerStack.cpp">
       <Filter>Nnuts</Filter>
     </ClCompile>
     <ClCompile Include="src\Nnuts\Log.cpp">

@@ -79,7 +79,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Nnpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>NN_ENABLE_ASSERTS;NN_PLATFORM_WINDOWS;NN_BUILD_DLL;NN_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NN_PLATFORM_WINDOWS;NN_BUILD_DLL;NN_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -111,7 +111,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -164,6 +164,8 @@
     <ClInclude Include="src\Nnuts\Events\Event.h" />
     <ClInclude Include="src\Nnuts\Events\KeyEvent.h" />
     <ClInclude Include="src\Nnuts\Events\MouseEvent.h" />
+    <ClInclude Include="src\Nnuts\Layer.h" />
+    <ClInclude Include="src\Nnuts\LayerStack.h" />
     <ClInclude Include="src\Nnuts\Log.h" />
     <ClInclude Include="src\Nnuts\Window.h" />
     <ClInclude Include="src\Platform\WindowsWindow.h" />
@@ -173,6 +175,8 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\Nnuts\Application.cpp" />
+    <ClCompile Include="src\Nnuts\Layer.cpp" />
+    <ClCompile Include="src\Nnuts\LayerStack.cpp" />
     <ClCompile Include="src\Nnuts\Log.cpp" />
     <ClCompile Include="src\Platform\WindowsWindow.cpp" />
   </ItemGroup>
