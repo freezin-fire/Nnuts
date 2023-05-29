@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 --Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Nnuts/vendor/GLFW/include"
+IncludeDir["Glad"] = "Nnuts/vendor/Glad/include"
 
 include "Nnuts/vendor/GLFW"
+include "Nnuts/vendor/Glad"
 
 project "Nnuts"
 	location "Nnuts"
@@ -34,11 +36,13 @@ project "Nnuts"
 	includedirs{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 	
 	links{
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
 		"dwmapi.lib"
 	}
@@ -50,7 +54,8 @@ project "Nnuts"
 		
 		defines{
 			"NN_PLATFORM_WINDOWS",
-			"NN_BUILD_DLL"
+			"NN_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands{

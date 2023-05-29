@@ -5,6 +5,8 @@
 #include "Nnuts/Events/KeyEvent.h"
 #include "Nnuts/Events/MouseEvent.h"
 
+#include <glad/glad.h>
+
 namespace Nnuts {
 	static bool s_GLFWInitialized = false;
 
@@ -42,6 +44,8 @@ namespace Nnuts {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		NN_CORE_ASSERT("Failed to initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVsync(true);
 

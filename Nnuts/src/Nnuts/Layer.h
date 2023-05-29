@@ -3,6 +3,10 @@
 #include "Nnuts/Core.h"
 #include "Nnuts/Events/Event.h"
 
+// To create a layer, the client will have to create a subclass
+// with the following layer class as base and then implement the 
+// functions as desired
+
 namespace Nnuts {
 	class NNUTS_API Layer
 	{
