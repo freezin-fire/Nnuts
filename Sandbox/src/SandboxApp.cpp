@@ -8,7 +8,7 @@ public:
 		: Layer("Exmaple") {}
 
 	void OnUpdate() override {
-		NN_INFO("ExampleLayer::Update");
+		//NN_INFO("ExampleLayer::Update");
 	}
 
 	void OnEvent(Nnuts::Event& event) override {
@@ -20,6 +20,7 @@ class Sandbox : public Nnuts::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushLayer(new Nnuts::ImGuiLayer());
 	}
 
 	~Sandbox() {

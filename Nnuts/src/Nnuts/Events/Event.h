@@ -19,7 +19,7 @@ namespace Nnuts {
 		// Application Events:
 		AppTick, AppUpdate, AppRender,
 		// Keyboard/Gamepad Events:
-		KeyPressed, KeyReleased,
+		KeyPressed, KeyReleased, KeyTyped,
 		// Mouse Events:
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};

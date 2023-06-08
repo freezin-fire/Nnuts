@@ -7,8 +7,14 @@
     <Filter Include="Nnuts\Events">
       <UniqueIdentifier>{81EFDE1E-6D52-6EC3-16D8-A679021A3A46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nnuts\ImGui">
+      <UniqueIdentifier>{2739599C-93EE-D191-1CE3-CB688897C895}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -35,6 +41,9 @@
     <ClInclude Include="src\Nnuts\Events\MouseEvent.h">
       <Filter>Nnuts\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nnuts\ImGui\ImGuiLayer.h">
+      <Filter>Nnuts\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nnuts\Layer.h">
       <Filter>Nnuts</Filter>
     </ClInclude>
@@ -47,6 +56,9 @@
     <ClInclude Include="src\Nnuts\Window.h">
       <Filter>Nnuts</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\WindowsWindow.h">
       <Filter>Platform</Filter>
     </ClInclude>
@@ -56,6 +68,9 @@
     <ClCompile Include="src\Nnuts\Application.cpp">
       <Filter>Nnuts</Filter>
     </ClCompile>
+    <ClCompile Include="src\Nnuts\ImGui\ImGuiLayer.cpp">
+      <Filter>Nnuts\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Nnuts\Layer.cpp">
       <Filter>Nnuts</Filter>
     </ClCompile>
@@ -64,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="src\Nnuts\Log.cpp">
       <Filter>Nnuts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\WindowsWindow.cpp">
       <Filter>Platform</Filter>
