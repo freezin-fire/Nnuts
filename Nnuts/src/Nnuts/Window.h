@@ -36,6 +36,8 @@ namespace Nnuts {
 		virtual void SetVsync(bool enabled) = 0;
 		virtual bool IsVsync() const = 0;
 
+		virtual void* GetNativeWindow() const = 0;
+
 		// Generate window on current platform (will return win32 windows
 		// when using windows and similarly will extend towards other 
 		// platforms like MacOS or Linux)

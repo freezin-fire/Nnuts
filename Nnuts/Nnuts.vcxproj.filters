@@ -59,9 +59,14 @@
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRendererLoader.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\WindowsWindow.h">
       <Filter>Platform</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nnuts\Input.h" />
+    <ClInclude Include="src\Platform\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nnpch.cpp" />
@@ -86,5 +91,6 @@
     <ClCompile Include="src\Platform\WindowsWindow.cpp">
       <Filter>Platform</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

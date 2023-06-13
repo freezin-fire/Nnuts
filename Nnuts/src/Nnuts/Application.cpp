@@ -5,6 +5,8 @@
 
 #include <glad/glad.h>
 
+#include "Input.h"
+
 namespace Nnuts {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -52,6 +54,17 @@ namespace Nnuts {
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
+			if (Input::IsMouseButtonPressed(0)) {
+				NN_CORE_TRACE("Left Mouse Button Pressed!");
+			}
+
+			if (Input::IsMouseButtonPressed(1)) {
+				NN_CORE_TRACE("Right Mouse Button Pressed!");
+			}
+
+			auto [x, y] = Input::GetMousePosition();
+			NN_CORE_TRACE("{0}, {1}", x, y);
 
 			m_Window->OnUpdate();
 		}

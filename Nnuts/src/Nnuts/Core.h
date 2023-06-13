@@ -10,6 +10,10 @@
 	#error Nnuts only for Windows at the moment!
 #endif
 
+#ifdef NN_DEBUG
+	#define NN_ENABLE_ASSERTS
+#endif
+
 #ifdef NN_ENABLE_ASSERTS
 	#define NN_ASSERT(x, ...) { if (!(x)) { NN_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define NN_CORE_ASSERT(x, ...) { if (!(x)) { NN_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }

@@ -1,5 +1,6 @@
 workspace "Nnuts"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations{
 		"Debug",
@@ -15,14 +16,18 @@ IncludeDir["GLFW"] = "Nnuts/vendor/GLFW/include"
 IncludeDir["Glad"] = "Nnuts/vendor/Glad/include"
 IncludeDir["ImGui"] = "Nnuts/vendor/imgui"
 
-include "Nnuts/vendor/GLFW"
-include "Nnuts/vendor/Glad"
-include "Nnuts/vendor/imgui"
+group "Dependencies"
+		include "Nnuts/vendor/GLFW"
+		include "Nnuts/vendor/Glad"
+		include "Nnuts/vendor/imgui"
+
+group ""
 
 project "Nnuts"
 	location "Nnuts"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -53,7 +58,6 @@ project "Nnuts"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 		
 		defines{
@@ -63,28 +67,29 @@ project "Nnuts"
 		}
 
 		postbuildcommands{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
 		defines "NN_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "NN_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "NN_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -105,7 +110,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 		
 		defines{
@@ -113,16 +117,16 @@ project "Sandbox"
 		}
 
 	filter "configurations:Debug"
-		buildoptions "/MDd"
+		runtime "Debug"
 		defines "NN_DEBUG"
 		symbols "On"
 	
 	filter "configurations:Release"
-		buildoptions "/MD"
+		runtime "Release"
 		defines "NN_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
-		buildoptions "/MD"
+		runtime "Release"
 		defines "NN_DIST"
 		optimize "On"
