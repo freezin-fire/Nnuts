@@ -15,6 +15,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Nnuts/vendor/GLFW/include"
 IncludeDir["Glad"] = "Nnuts/vendor/Glad/include"
 IncludeDir["ImGui"] = "Nnuts/vendor/imgui"
+IncludeDir["glm"] = "Nnuts/vendor/glm"
 
 group "Dependencies"
 		include "Nnuts/vendor/GLFW"
@@ -37,7 +38,9 @@ project "Nnuts"
 
 	files{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 	
 	includedirs{
@@ -45,7 +48,8 @@ project "Nnuts"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 	
 	links{
@@ -101,7 +105,8 @@ project "Sandbox"
 	
 	includedirs{
 		"Nnuts/vendor/spdlog/include",
-		"Nnuts/src"
+		"Nnuts/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links{
