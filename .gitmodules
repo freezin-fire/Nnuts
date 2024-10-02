@@ -10,3 +10,12 @@
 [submodule "Nnuts/vendor/glm"]
 	path = Nnuts/vendor/glm
 	url = https://github.com/g-truc/glm
+[submodule "nnuts/vendor/glfw"]
+	path = nnuts/vendor/glfw
+	url = https://github.com/TheCherno/glfw.git
+[submodule "nnuts/vendor/imgui"]
+	path = nnuts/vendor/imgui
+	url = https://github.com/TheCherno/imgui.git
+[submodule "nnuts/vendor/spdlog"]
+	path = nnuts/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
