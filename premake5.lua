@@ -106,6 +106,7 @@ project "Sandbox"
 	includedirs{
 		"Nnuts/vendor/spdlog/include",
 		"Nnuts/src",
+		"Nnuts/vendor",
 		"%{IncludeDir.glm}"
 	}
 

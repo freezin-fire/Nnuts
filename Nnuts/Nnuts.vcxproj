@@ -169,8 +169,6 @@
     <ClInclude Include="src\Nnuts\Log.h" />
     <ClInclude Include="src\Nnuts\MouseButtonCodes.h" />
     <ClInclude Include="src\Nnuts\Window.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRendererLoader.h" />
     <ClInclude Include="src\Platform\WindowsInput.h" />
     <ClInclude Include="src\Platform\WindowsWindow.h" />
   </ItemGroup>
@@ -179,11 +177,11 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\Nnuts\Application.cpp" />
+    <ClCompile Include="src\Nnuts\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Nnuts\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Nnuts\Layer.cpp" />
     <ClCompile Include="src\Nnuts\LayerStack.cpp" />
     <ClCompile Include="src\Nnuts\Log.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\WindowsWindow.cpp" />
   </ItemGroup>
