@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef NN_PLATFORM_WINDOWS
+#if NN_DYNAMIC_LINK
 	#ifdef NN_BUILD_DLL
 		#define NNUTS_API __declspec(dllexport)
 	#else
 		#define NNUTS_API __declspec(dllimport)
 	#endif
+#else
+	#define NNUTS_API
+#endif
 #else
 	#error Nnuts only for Windows at the moment!
 #endif
